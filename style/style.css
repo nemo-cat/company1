@@ -1,0 +1,19 @@
+.main-slide-item {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-slide-item:nth-child(1) {
+    background-image: url(../images/slider/slider01.png);
+}
+
+.main-slide-item:nth-child(2) {
+    background-image: url(../images/slider/slider02.png);
+}
+
+.main-slide-item:nth-child(3) {
+    background-image: url(../images/slider/slider03.png);
+}
