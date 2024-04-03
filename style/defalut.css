@@ -1,5 +1,10 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 
 /* Reset */
 html,
@@ -102,14 +107,17 @@ button {
 
 /* Normalize */
 body {
-    font-family: "Noto Sans KR", sans-serif;
-    color: #333;
+    font-family: 'Pretendard-Regular';
+    /* color: #333; */
+    color: #212121;
 }
+
 select {
     appearance: none;
     margin: 0 40px 0 0;
     background: url(../images/bu_select.png) no-repeat right 20px center;
 }
+
 select::-ms-expand {
     display: none;
 }
@@ -122,13 +130,10 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="text"]:focus,
 input[type="password"]:focus {
     outline: none;
-    border: 1px solid #227C39;
 }
 
 input[type="text"]::placeholder {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 14px;
-    color: #999;
+    font-family: 'Pretendard-Regular';
 }
 
 .ie9 .test {
@@ -136,10 +141,12 @@ input[type="text"]::placeholder {
     z-index: 0;
     display: inline-block;
 }
+
 .ie9 .test select {
     margin: 0 20px 0 0;
     z-index: 1;
 }
+
 .ie9 .test:before {
     content: "";
     position: absolute;
@@ -160,6 +167,7 @@ input[type="text"]::placeholder {
     display: block;
     clear: both;
 }
+
 caption,
 caption > div,
 legend,
