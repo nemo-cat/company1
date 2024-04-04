@@ -16,7 +16,6 @@ section .sub-tit {
     color: #6a6a6a;
 }
 
-
 .wrap {
     max-width: 1280px;
     margin: 0 auto;
@@ -38,7 +37,7 @@ header {
     left: 0;
     width: 100%;
     height: 100px;
-    z-index: 10;
+    z-index: 1000;
 }
 
 .mobile-header {
@@ -47,7 +46,6 @@ header {
 
 .pc-header {
     /* position: relative; */
-    
 }
 
 .pc-header .nav-bg {
@@ -59,7 +57,7 @@ header {
     background-color: #F1F1F3;
     height: 500px;
     box-shadow: 0 4px 10px rgba(99, 99, 99, 0.3);
-    z-index: 100;
+    z-index: 10000;
 }
 
 .pc-header .gnb-bg {
@@ -70,7 +68,7 @@ header {
     width: 100%;
     height: 100px;
     background-color: #fff;
-    z-index: 200;
+    z-index: 20000;
 } 
 
 .pc-header .wrap {
@@ -80,19 +78,30 @@ header {
     transform: translateX(-50%);
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
     padding: 0;
     height: 100%;
-    z-index: 300;
+    z-index: 30000;
 }
 
 .pc-header h1 {
-    width: 190px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    max-width: 160px;
     line-height: 100px;
-    color: #fff;
+}
+
+.pc-header h1 a {
+    display: block;
+    height: 100px;
+    padding: 0 10px;
 }
 
 .pc-header nav {
-    width: 80%;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 160px);
     color: #fff;
 }
 
@@ -136,12 +145,42 @@ header {
     overflow: hidden;
 }
 
+
+.slide .slide-pagination {
+    position: absolute;
+    top: initial; /*top값 초기화*/
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+   /*  height: 10px; */
+}
+
+.slide-prev {
+    padding-left: 50px;
+    color: rgba(255, 255, 255 ,0.5);
+}
+
+.slide-next {
+    padding-right: 50px;
+    color: rgba(255, 255, 255 ,0.5);
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background-color: #071F75;
+}
+
+
 .slide-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+}
+
+.slide-text img {
+    object-fit: cover;
 }
 
 .main-slide-item {
@@ -152,16 +191,11 @@ header {
     background-size: cover;
 }
 
-.main-slide-item:nth-child(1) {
-    background-image: url(../images/slider/slider01.png);
-}
-
-.main-slide-item:nth-child(2) {
-    background-image: url(../images/slider/slider02.png);
-}
-
-.main-slide-item:nth-child(3) {
-    background-image: url(../images/slider/slider03.png);
+.main-slide-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* business */
@@ -231,7 +265,8 @@ header {
     flex-flow: column;
     /* height: 100px; */
     border: 1px solid #ebebeb;
-    transition: 0.3s;
+    transition-property: transform;
+    transition-duration: 0.3s;
 }
 
 .newsroom-item:hover {
@@ -287,7 +322,8 @@ header {
     position: relative;
     border: 1px solid #ebebeb;
     background-color: #fff;
-    transition: all 0.3s;
+    transition-property: transform;
+    transition-duration: 0.3s;
 }
 
 .recruitment-item::after {
@@ -358,12 +394,15 @@ footer {
     color: #fff;
 }
 
+footer .wrap {
+    padding-bottom: 0;
+}
+
 .footer-top ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    font-size: 22px;
+    /* font-size: 22px; */
     font-weight: 600;
 }
 
@@ -371,16 +410,31 @@ footer {
     padding: 0 25px;
 }
 
-.footer-bottom {
-    display: flex;
+
+.footer-top ul li a {
+    display: block;
+    height: 70px;
+    line-height: 70px;
 }
 
+.footer-top ul li:hover a {
+    text-decoration: underline;
+}
+
+
+.footer-bottom {
+    display: flex;
+  /*   font-size: 14px; */
+    color: #F1F1F3;
+    padding-bottom: 50px;
+}
+/* 
 .footer-bottom .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 190px;
-}
+} */
 
 .footer-bottom .copy {
     width: 100%;
@@ -397,36 +451,61 @@ footer {
     padding: 10px 25px;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1023px) {
+    body {
+        position: relative;
+    }
+
+    body.stop-scroll {
+        height: 100%;
+        overflow: hidden;
+    }
+
     .wrap {
         padding: 0 30px 75px;
         overflow: hidden;
     }
 
     /* header */
+    .pc-header {
+        display: none;
+    }
+
+    .mobile-bg {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0 ,0.5);
+        z-index: 1;
+    }
+
     .mobile-header {
         display: block;
+        position: absolute;
+        z-index: 20000;
     }
 
     .mobile-header.active {
         background-color: #fff;
     }
     
-    .pc-header {
-        display: none;
-    }
-
     .header-top {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
         height: 100px;
     }
 
     .toggleMenu {
         width: 50px;
         height: 50px;
-        background: url(../images/ico-menu.png) no-repeat center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('../images/ico-menu.png');
+        background-color: initial;
     }
 
     .mobile-header nav {
@@ -436,6 +515,7 @@ footer {
         background-color: #F1F1F3;
         width: 80%;
         height: 100vh;
+        z-index: 20000;
     }
 
     .mobile-header nav .gnb-menu {
@@ -443,28 +523,42 @@ footer {
         flex-flow: column nowrap;
     }
 
-    .mobile-header .gnb-menu > li > a {
-        display: block;
-        padding: 0 10px;
+    .mobile-header .gnb-menu > li {
+        /* display: block; */
+        /* padding: 0 10px; */
         line-height: 50px;
+        text-indent: 10px;
         font-size: 18px;
         font-weight: 500;
         border-bottom: 1px solid #dfdfdf;
     }
 
-    .mobile-header .gnb-menu > li:hover > a {
+    .mobile-header .gnb-menu > li:hover {
         color: #071F75;
     }
 
-    .mobile-header .gnb-menu > li.active > a {
+    .mobile-header .gnb-menu > li.active {
         color: #071F75;
+    }
+
+    
+    .mobile-header .gnb-menu > li.active .sub-menu {
+        color: #212121;
     }
 
     .mobile-header .sub-menu > li {
-        padding: 0 20px;
+        padding: 0 10px;
+        border-bottom: 1px solid #dfdfdf;
+    }
+
+    .mobile-header .sub-menu > li:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-header .sub-menu > li > a {
+        display: block;
         height: 40px;
         line-height: 40px;
-        border-bottom: 1px solid #dfdfdf;
     }
 
     .mobile-header .sub-menu > li:hover {
@@ -534,11 +628,136 @@ footer {
     .newsroom-swiper {
         overflow: hidden;
     }
+}
 
-    @media all and (max-width: 768px) {
-        .wrap {
-            padding: 0 10px 75px;
-        }
+@media all and (max-width: 768px) {
+    body {
+        min-width: 320px;
+    }
+
+    .wrap {
+        padding: 0 10px 75px;
+    }
+
+    .slide-prev {
+        padding-left: 15px;
     }
     
+    .slide-next {
+        padding-right: 1x5px;
+    }
+
+    .slide-text {
+        width: 100%;
+        padding: 50px;
+    }
+    
+    .slide-text img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* footer */
+    .footer-bottom .copy ul li {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    
+    .footer-bottom .copy p{
+        font-size: 14px;
+    }
+
 }
+
+@media all and (max-width: 599px) {
+    
+    .mobile-header {
+        height: 50px;
+    }
+
+    .mobile-header .header-top {
+        height: 50px;
+    }
+
+    .mobile-header .logo {
+        height: 50px;
+    }
+
+    .mobile-bg {
+        top: 50px;
+    }
+
+    .mobile-header nav {
+        top: 50px;
+    }
+
+    .recruitment-item::after {
+        padding-bottom: 70%;
+    }
+
+    
+    .slide-prev,
+    .slide-next  {
+        display: none;
+    }
+
+      /* footer */
+    
+    .footer-top ul li {
+        padding: 0;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+    
+    .footer-top ul li:last-child {
+        padding-right: 0;
+    }
+
+    
+      .footer-bottom .copy {
+        align-items: flex-start;
+      }
+      .footer-bottom .copy ul {
+        flex-flow: column;
+        align-items: flex-start;
+      }
+      .footer-bottom .copy ul li {
+        padding: 5px 0;
+    }
+
+    
+    .footer-bottom .copy p{
+        padding: 5px 0;
+        line-height: 28px;
+    }
+
+}
+
+
+@media all and (max-width: 400px) {
+    body {
+        min-width: 320px;
+    }
+    .wrap {
+        padding: 0 10px 75px;
+    }
+
+
+    .slide-text {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .slide-text img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+    .recruitment-item::after {
+        padding-bottom: 100%;
+    }
+
+}
+    
