@@ -1,0 +1,195 @@
+/* style 공통 */
+.subPage-tit {
+    position: relative;
+    height: 400px;
+}
+
+.subPage-tit p {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    z-index: 2;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.subPage-bg {
+    height: 100%;
+    background: url(../images/subPage1.png) no-repeat 0 -200px;
+}
+
+.subPage-overlay {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.subPage-nav {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.subPage-nav .wrap {
+    padding: 0;
+}
+
+.subPage-nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.subPage-nav ul li {
+    width: 33.3333%;
+    position: relative;
+    border-bottom: 2px solid #fff;
+}
+
+.subPage-nav ul li.active {
+    font-weight: 600;
+    border-bottom: 2px solid #071F75;
+}
+
+.subPage-nav ul li:hover {
+    /* color: #071F75; */
+    border-bottom: 2px solid #ebebeb;
+}
+
+.subPage-nav ul li.active:hover {
+    border-bottom: 2px solid #071F75;
+}
+
+
+.subPage-nav ul li.active a {
+    color: #071F75;
+}
+
+.subPage-nav ul li ~ li::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    content: "";
+    width: 1px;
+    height: 20px;
+    background-color: #ebebeb;
+}
+
+.subPage-nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.content {
+    padding: 0 50px;
+}
+
+.content-tit {
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+/* sub1-1 인사말 */
+
+.content-img {
+    position: relative;
+    height: 300px;
+    background: url(../images/subPage1-content-img.png) no-repeat center;
+}
+
+.content-img p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    
+}
+
+.content-img p b {
+    display: block;
+    padding-bottom: 20px;
+    font-size: 42px;
+}
+
+.content-text {
+    position: relative;
+    padding: 50px 0;
+    line-height: 30px;
+}
+
+.content-text .logo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+/* sub1-2 주요연혁 */
+.content-tab {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+
+.content-tab ul {
+    display: flex;
+    width: 100%;
+}
+
+.content-tab ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.333%;
+    height: 60px;
+    border: 1px solid #ebebeb;
+    cursor: pointer;
+}
+
+.content-tab ul li ~ li {
+    border-left: none;
+}
+
+.content-tab ul li.active {
+    background-color: #071F75;
+    color: #fff;
+}
+
+.content-tab ul li:hover {
+    background-color: #ebebeb;
+}
+
+
+@media all and (max-width: 1023px) {
+    /* style 공통 */
+    .content {
+        padding: 0 20px;
+    }
+}
+
+
+@media all and (max-width: 400px) {
+    /* style 공통 */
+    .content {
+        padding: 0;
+    }
+
+    .content-text .logo {
+        bottom: -20px;
+    }
+    
+}
