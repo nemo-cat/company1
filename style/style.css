@@ -116,6 +116,7 @@ header {
     text-align: center;
     font-size: 21px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .pc-header .sub-menu > li {
@@ -123,6 +124,10 @@ header {
     line-height: 50px;
     font-size: 18px;
     color: #212121;
+}
+
+.pc-header .sub-menu > li a {
+    display: block;
 }
 
 .pc-header:hover li {
@@ -531,6 +536,7 @@ footer .wrap {
         font-size: 18px;
         font-weight: 500;
         border-bottom: 1px solid #dfdfdf;
+        cursor: pointer;
     }
 
     .mobile-header .gnb-menu > li:hover {

@@ -57,14 +57,12 @@
 }
 
 .subPage-nav ul li:hover {
-    /* color: #071F75; */
     border-bottom: 2px solid #ebebeb;
 }
 
 .subPage-nav ul li.active:hover {
     border-bottom: 2px solid #071F75;
 }
-
 
 .subPage-nav ul li.active a {
     color: #071F75;
@@ -173,12 +171,292 @@
     background-color: #ebebeb;
 }
 
+.content-tab ul li.active:hover {
+    background-color: #071F75;
+    color: #fff;
+}
+
+.history-list {
+    position: relative;
+}
+
+.history-year {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px;
+    font-size: 36px;
+    font-weight: 600;
+    color: #071F75;
+}
+
+.history-year span {
+    position: relative;
+    padding: 10px 100px 10px 0;
+}
+
+.history-year span::after {
+    position: absolute;
+    top: 24px;
+    right: 35px;
+    display: block;
+    content: "";
+    width: 40px;
+    height: 2px;
+    border-top: 1px solid #071F75;
+}
+
+.history-year::after {
+    display: block;
+    content: "";
+    width: 6px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    border-left: 1px solid #ebebeb;
+}
+
+.history-month {
+    position: relative;
+    width: 60%;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 20px;
+    color: #212121;
+}
+
+.history-month li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.history-month li::before {
+    position: absolute;
+    top: 14px;
+    left: 5px;
+    display: block;
+    content: "";
+    width: 5px;
+    height: 1px;
+    background-color: #bebebe
+}
+
+.history-month::before {
+    position: absolute;
+    top: 16px;
+    left: -10px;
+    display: block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    z-index: 1;
+    background: url(../images/history-ico.png) no-repeat center;
+}
+
+/* sub1-3 오시는길 */
+.sub1-3 .content-text {
+    padding: 0;
+}
+
+.map-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.adress {
+    padding-top: 50px;
+}
+
+.adress > ul {
+    border-top: 2px solid #071F75;
+}
+
+.adress > ul > li {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+
+.adress-tit {
+    display: inline-block;
+    width: 130px;
+    text-align: center;
+}
+
+/* .public-transport {
+    display: flex;
+    align-items: center;
+}
+ */
+.public-transport ul {
+    width: 100%;
+}
+
+.public-transport ul li {
+    display: flex;
+    padding: 10px 0;
+}
+
+.public-transport ul li div {
+    display: flex;
+}
+
+.transport-tit {
+    width: 100px;
+    text-align: center;
+}
+
+.subway-ico {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    line-height: 25px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    border-radius: 100%;
+}
+
+.subway-ico1 {
+    background-color: #fc4c02;
+}
+
+.subway-ico2 {
+    background-color: #67823a;
+}
+
+/* sub2-1 인사말 */
+.sub2-1 h3 {
+    /* text-align: center; */
+    padding: 0 0 50px;
+    font-size: 32px;
+}
+
+.sub2-1 .content-bottom {
+    padding-top: 50px;
+}
+
+.sub2-1 .content-bottom img {
+    width: 100%;
+    object-fit: contain;
+}
 
 @media all and (max-width: 1023px) {
     /* style 공통 */
     .content {
         padding: 0 20px;
     }
+}
+
+/* sub2-2 윤리경영 */
+.sub2 .content-text {
+    display: flex;
+    flex-flow: column;
+}
+
+.sub2 .content-item {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+}
+
+.sub2 .content-item:nth-child(odd) .content-item-inner {
+    flex-flow: row-reverse nowrap;
+}
+
+
+.sub2 .content-item-inner {
+    display: flex;
+    width: 100%;
+    background-color: yellow;
+}
+
+.sub2 .content-item-inner div{
+    width: 50%;
+   /*  padding-top: 28.125%; */
+    background-color: pink;
+}
+
+.sub2 .content-item-inner div:last-child {
+    background-color: skyblue;
+}
+
+@media all and (max-width: 767px) {
+    /* sub1-2 오시는길 */
+    .history-year span {
+        padding: 10px 30px;
+    }
+    
+    .history-year span::after {
+        display: none;
+    }
+
+    /* sub1-3 오시는길 */
+    .adress-tit {
+        width: 100px;
+    }
+
+    .transport-tit {
+        text-align: left;
+    }
+
+    .public-transport ul li {
+        flex-flow: column;
+        padding: 10px;
+    }
+
+    
+}
+
+@media all and (max-width: 440px) {
+    /* sub1-2 오시는길 */
+    .history-list {
+        position: relative;
+    }
+    
+    .history-year {
+        flex-flow: column;
+        padding: 0;
+    }
+    
+    .history-year span {
+        padding: 20px 10px;
+    }
+    
+    
+    .history-year::after {
+        display: none;
+    }
+    
+    .history-month {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    
+    .history-month::before {
+        display: none;
+    }
+
+    .history-month li {
+        padding-left: 10px;
+    }
+    
+    .history-month li::before {
+        left: -2px;
+    }
+
+    /* sub1-3 오시는길 */
+    .subway-ico {
+        display: none;
+    }
+    
+    
 }
 
 
