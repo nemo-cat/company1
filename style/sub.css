@@ -90,11 +90,19 @@
 }
 
 .content-tit {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     height: 200px;
-    line-height: 200px;
+    /* line-height: 200px; */
     text-align: center;
     font-size: 28px;
     font-weight: 500;
+}
+
+.content-tit p {
+    padding: 20px 0 0;
+    font-size: 16px;
 }
 
 /* sub1-1 인사말 */
@@ -346,44 +354,64 @@
     object-fit: contain;
 }
 
-@media all and (max-width: 1023px) {
-    /* style 공통 */
-    .content {
-        padding: 0 20px;
-    }
-}
-
 /* sub2-2 윤리경영 */
 .sub2 .content-text {
     display: flex;
     flex-flow: column;
+    padding: 0 0 50px;
 }
 
 .sub2 .content-item {
     display: flex;
     flex-flow: row nowrap;
-    margin-bottom: 10px;
+  /*   margin-bottom: 50px; */
 }
 
 .sub2 .content-item:nth-child(odd) .content-item-inner {
     flex-flow: row-reverse nowrap;
 }
 
-
 .sub2 .content-item-inner {
     display: flex;
     width: 100%;
-    background-color: yellow;
 }
 
 .sub2 .content-item-inner div{
     width: 50%;
    /*  padding-top: 28.125%; */
-    background-color: pink;
 }
 
 .sub2 .content-item-inner div:last-child {
-    background-color: skyblue;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sub2 .content-item-inner div img {
+    width: 100%;
+    min-height: 250px;
+    object-fit: cover;
+}
+
+.sub2 .content-item-inner div span {
+    color: #071F75;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.subPage-nav ul li a.subPage-nav-mobile {
+    display: none;
+}
+
+
+
+@media all and (max-width: 1023px) {
+    /* style 공통 */
+    .content {
+        padding: 0 20px;
+    }
+
 }
 
 @media all and (max-width: 767px) {
@@ -410,6 +438,29 @@
         padding: 10px;
     }
 
+    /* sub2-2 윤리경영 */
+
+    .sub2 .content-item {
+        flex-flow: column nowrap;
+        margin-bottom: 20px;
+    }
+
+    .sub2 .content-item:nth-child(odd) .content-item-inner {
+        flex-flow: column nowrap;
+    }
+
+    .sub2 .content-item-inner {
+        flex-flow: column nowrap;
+    }
+
+    .sub2 .content-item-inner div{
+        width: 100%;
+    }
+
+
+
+ 
+
     
 }
 
@@ -427,7 +478,6 @@
     .history-year span {
         padding: 20px 10px;
     }
-    
     
     .history-year::after {
         display: none;
@@ -456,12 +506,36 @@
         display: none;
     }
     
-    
 }
 
 
 @media all and (max-width: 400px) {
     /* style 공통 */
+    .subPage-nav ul li a.subPage-nav-mobile {
+        display: block;
+    }
+
+    .subPage-nav ul li a.subPage-nav-pc {
+        display: none;
+    }
+    
+    .subPage-nav ul {
+        height: 80px;
+     }
+
+    .subPage-nav ul li {
+        height: 100%;
+    }
+
+    .subPage-nav ul li a,
+    .subPage-nav ul li a.subPage-nav-mobile  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 0;
+    }
+
     .content {
         padding: 0;
     }
@@ -469,5 +543,5 @@
     .content-text .logo {
         bottom: -20px;
     }
-    
+
 }

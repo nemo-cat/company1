@@ -1,0 +1,259 @@
+/* sub3-1 플랜트사업 */
+/* style 공통 */
+.sub3 {
+    padding: 0;
+}
+
+.sub3 .wrap {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.imgTit {
+    aspect-ratio: 3 / 2;
+}
+
+.imgTit img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.sub3-sec {
+    padding: 0 50px;
+    margin-bottom: 50px;
+}
+
+
+.sub3-sec .sec-left,
+.sub3-sec .sec-right {
+    width: 50%;
+}
+
+/* sec1 */
+.sec2 .wrap {
+    padding-bottom: 0;
+}
+
+.sec1 .sec-left span {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #071F75;
+}
+
+.sec1 .sec-left span::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+    width: 8px;
+    height: 95px;
+    /* background-color: #212121; */
+    background-color: #071F75;
+}
+
+/* sec2 */
+.subSec-img {
+    aspect-ratio : 2/3;
+    background-color: rgb(167, 167, 167);
+}
+
+.sec2 .sec-right {
+    padding: 0 0 0 80px;
+}
+
+.subSec-tit {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    color: #071F75;
+    
+}
+
+.subSec-tit::before {
+    display: block;
+    content: "01";
+    font-size: 16px;
+    border-bottom: 2px solid #071F75;
+}
+
+/* sec3 */
+/* .sec3 {
+    margin-bottom: 0;
+} */
+
+.sec3 .wrap {
+    min-height: 500px;
+    padding-bottom: 0;
+}
+
+.sec-item {
+    background-color: rgb(167, 167, 167) ;
+}
+
+.sec3 .sec-left .sec-item {
+    height: 100%;
+}
+
+.sec3 .sec-right .sec-item  {
+    aspect-ratio: 2/3;
+}
+
+.sec3 .sec-left {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.sec3 .sec-right {
+    width: 40%;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+/* sub4 */
+.sec4 .subSec-tit {
+    padding: 0;
+    padding-right: 80px;
+}
+.sec4 .subSec-tit::before {
+    content: "02";
+}
+
+.sec4 .sec-inner {
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    /* grid-template-rows: auto; */
+    grid-column-gap: 20px;
+    row-gap: 20px;
+    width: 100%;
+}
+
+.sec4 .sec-item:nth-child(1) {
+    text-align: right;
+    background-color: initial;
+}
+
+.sec4 .sec-item:nth-child(2) {
+    aspect-ratio : 2/3;
+}
+
+.sec4 .sec-item:nth-child(3),
+.sec4 .sec-item:nth-child(4) {
+    aspect-ratio : 3/2;
+}
+
+.sec4 .sec-item:last-child {
+    grid-column-start: 1;
+	grid-column-end: 3;
+    background-color: initial;
+}
+
+@media all and (max-width: 767px){
+    /* style 공통 */
+    .sub3 .wrap {
+        display: flex;
+        flex-flow: column nowrap;
+        padding-bottom: 0;
+    }
+
+    .sub3-sec {
+        padding: 0 10px;
+        margin-bottom: 50px;
+    }
+
+    .sub3-sec .sec-left,
+    .sub3-sec .sec-right {
+        width: 100%;
+    }
+
+    .sub3 .subSec-tit {
+        margin-bottom: 20px;
+    }
+
+    /* sec1 */
+    .sec1 .sec-right p {
+        padding: 20px 10px;
+    }
+
+    /* sec2 */
+    .subSec-img {
+        aspect-ratio : 3/2;
+    }
+
+    .sec2 .sec-right {
+        padding: 20px 0;
+    }
+
+    /* sec3 */
+    .sec3 {
+        margin-bottom: 20px;
+    }
+
+    .sec-item {
+        width: 100%
+    }
+
+    .sec3 .sec-left .sec-item {
+        aspect-ratio: 3/2;
+    }
+
+    .sec3 .sec-right .sec-item  {
+        aspect-ratio: 2/3;
+    }
+
+    .sec3 .sec-left {
+        width: 100%;
+        padding: 0;
+    }
+
+    .sec3 .sec-right {
+        width: 100%;
+        padding: 20px 0 0;
+    }
+
+    /* sub4 */
+    .sec4 .subSec-tit {
+        padding: 0;
+        padding-right: 80px;
+    }
+    .sec4 .subSec-tit::before {
+        content: "02";
+    }
+
+    .sec4 .sec-inner {
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        /* grid-template-rows: auto; */
+        grid-column-gap: 20px;
+        row-gap: 20px;
+        width: 100%;
+    }
+
+    .sec4 .sec-item:nth-child(1) {
+        text-align: right;
+        background-color: initial;
+    }
+
+    .sec4 .sec-item:nth-child(2) {
+        aspect-ratio : 2/3;
+    }
+
+    .sec4 .sec-item:nth-child(3),
+    .sec4 .sec-item:nth-child(4) {
+        aspect-ratio : 3/2;
+    }
+
+    .sec4 .sec-item:last-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: initial;
+    }
+
+}
