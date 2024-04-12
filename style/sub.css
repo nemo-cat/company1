@@ -9,15 +9,18 @@
     top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
-    color: #fff;
+    width: 100%;
     z-index: 2;
     font-size: 40px;
     font-weight: 600;
+    text-align: center;
+    color: #fff;
 }
 
 .subPage-bg {
     height: 100%;
-    background: url(../images/subPage1.png) no-repeat 0 -200px;
+    background: url(../images/subPage1.png) no-repeat center;
+    background-size: cover;
 }
 
 .subPage-overlay {
@@ -93,11 +96,23 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
-    height: 200px;
-    /* line-height: 200px; */
+    min-height: 200px;
     text-align: center;
     font-size: 28px;
     font-weight: 500;
+}
+
+.content-tit h2 {
+    min-height: 50px;
+    padding: 20px 0 10px;
+}
+
+.content-tit span {
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    padding: 20px 0;
 }
 
 .content-tit p {

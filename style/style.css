@@ -257,21 +257,19 @@ header {
     overflow: hidden;
 }
 
+.newsroom .tit {
+    margin-bottom: 20px;
+}
 
-/* .newsroom-swiper .swiper-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    background: tan;
-    column-gap: 20px;
-} */
+.newsroom-item {
+    transition-property: transform;
+    transition-duration: 0.3s;
+}
 
 .newsroom-item a {
     display: flex;
     flex-flow: column;
-    /* height: 100px; */
     border: 1px solid #ebebeb;
-    transition-property: transform;
-    transition-duration: 0.3s;
 }
 
 .newsroom-item:hover {
@@ -309,18 +307,37 @@ header {
     font-size: 14px;
 }
 
+.recruitment-more {
+    font-size: 14px;
+    text-align: right;
+    color: #6a6a6a;
+}
+
+
+.recruitment-more a {
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+.recruitment-more a:hover {
+    text-decoration: underline;
+}
 
 /* 채용공고 recruitment */
+.recruitment {
+    position: relative;
+}
+
 .recruitment .wrap {
     overflow: hidden;
 }
 
-/* .recruitment-list {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 20px;
+.recruitment-prev,
+.recruitment-next {
+    position: absolute;
+    color: #071F75;
 }
- */
+
 .recruitment-item {
     width: 100%;
     padding: 40px;

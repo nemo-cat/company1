@@ -1,4 +1,4 @@
-/* sub6-2 채용공고*/
+/* sub6-1 채용공고 */
 .content-text {
     padding-top: 0;
 }
@@ -45,7 +45,7 @@
 }
 
 .employment-list .bottom {
-    align-items: center;
+    align-items: flex-end;
 }
 
 .employment-list .bottom p {
@@ -76,6 +76,85 @@
 .employment-list .invalid + button:hover {
     background-color: red;
 }
+
+/* sub6-2 채용문의 */   
+.sub6-2 .content-bottom {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.inquiry-list {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 20px 0;
+    border-top: 2px solid #071F75;
+    /* border-bottom: 1px solid #ebebeb; */
+}
+
+.inquiry-list li {
+    padding: 20px 10px;
+}
+
+.inquiry-list li,
+.inquiry-list li > div {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.inquiry-list li > div {
+    width: 50%;
+}
+
+.inquiry-list label {
+    width: 120px;
+    text-align: center;
+}
+
+.inquiry-list input {
+    width: calc( 100% - 120px);
+    padding: 10px;
+    border: 1px solid #ebebeb;
+}
+
+.inquiry-list textarea {
+    width: 100%;
+    min-height: 400px;
+    padding: 10px;
+    border: 1px solid #ebebeb;
+    resize: none;
+}
+
+@media all and (max-width: 767px) {
+    .inquiry-list li {
+        padding: 10px;
+    }
+    .inquiry-list li:nth-child(2) {
+        display: flex;
+        flex-flow: column;
+        padding: 0;
+    }
+    
+    .inquiry-list li > div {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .inquiry-list label {
+        width: 80px;
+    }
+    
+    .inquiry-list input {
+        width: calc( 100% - 80px);
+        padding: 10px 5px;
+    }
+
+    .inquiry-list textarea {
+        padding: 10px 5px;
+    }
+    
+    
+}
+
 
 @media all and (max-width: 500px) {
     /* sub6-2 채용공고*/    

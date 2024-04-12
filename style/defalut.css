@@ -127,12 +127,14 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
+input:focus,
+textarea:focus,
+select:focus {
     outline: none;
 }
 
-input[type="text"]::placeholder {
+input::placeholder,
+textarea::placeholder {
     font-family: 'Pretendard-Regular';
 }
 
@@ -197,7 +199,52 @@ legend,
     top: 0;
 }
 
-/* Index 페이지 공통 Stlye */
+/* 공통 Style */
+#notice {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+}
+
+.notice-inner {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.notice-img {
+    width: 300px;
+    height: 300px;
+    background: url(../images/notice.png) no-repeat center;
+}
+
+.notice-close {
+    display: block;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #F1CB00;
+    color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.notice-close:hover {
+    background-color: #227C39;
+    text-decoration: underline;
+}
+
 html {
     height: 100%;
     overflow:auto;
@@ -209,7 +256,6 @@ body {
     height: 100%;
 }
 
-/* 공통 Style */
 select {
     width: 120px;
     height: 50px;
@@ -217,6 +263,10 @@ select {
     margin-right: 10px;
     border: 1px solid #ebebeb;
     background: url(../images/ico-selectDown.png) no-repeat center right 15px;
+}
+
+button {
+    color: #666;
 }
 
 button.search {
@@ -258,7 +308,6 @@ table tbody td {
     border: 1px solid #ebebeb;
     text-align: center  ;
 }
-
 
 ::-moz-selection {
     background: #071F75;

@@ -123,17 +123,11 @@
 }
 
 /* sub5-4 주가정보 */
-.sub5-3 .content-tit span {
-    font-size: 18px;
-    font-weight: 400;
-    color: #666;
-    padding: 20px 0;
-}
 .now-stock {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 50px;
+    padding: 30px 0 70px;
 }
 
 .now-stock .left {
