@@ -11,7 +11,9 @@
 }
 
 .imgTit {
-    aspect-ratio: 3 / 2;
+    max-height: 500px;
+    overflow: hidden;
+    margin-bottom: 50px;
 }
 
 .imgTit img {
@@ -23,7 +25,6 @@
     padding: 0 50px;
     margin-bottom: 50px;
 }
-
 
 .sub3-sec .sec-left,
 .sub3-sec .sec-right {

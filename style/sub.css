@@ -34,6 +34,10 @@
 }
 
 .subPage-nav {
+    position: sticky;
+    top: 0px;
+    z-index: 10000;
+    background-color: #fff;
     border-bottom: 1px solid #ebebeb;
 }
 
@@ -137,7 +141,6 @@
     color: #fff;
     font-size: 24px;
     text-align: center;
-    
 }
 
 .content-img p b {
@@ -146,9 +149,13 @@
     font-size: 42px;
 }
 
+.sub1-1 .content-text {
+    padding-top: 50px;
+}
+
 .content-text {
     position: relative;
-    padding: 50px 0;
+    padding: 0 0 50px;
     line-height: 30px;
 }
 
@@ -201,6 +208,7 @@
 
 .history-list {
     position: relative;
+    margin: 50px 0 0;
 }
 
 .history-year {

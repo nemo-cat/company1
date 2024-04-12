@@ -32,3 +32,65 @@
 .con-text {
     padding: 40px 0;
 }
+
+.content-left .con-item:nth-child(1) {
+    position: relative;
+    animation-name: show;
+    animation-duration: 1s; 
+}
+
+.content-left .con-item:nth-child(2) {
+    position: relative;
+    animation-name: show;
+    animation-duration: 2s;
+}
+
+.content-right .con-item:nth-child(1) {
+    position: relative;
+    animation-name: show;
+    animation-duration: 3s;
+}
+
+.content-right .con-item:nth-child(2) {
+    position: relative;
+    animation-name: show;
+    animation-duration: 3.5s;
+}
+
+@keyframes show {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+ }
+
+
+@media all and (max-width: 1000px) {
+    .content-left {
+        padding-right: 20px;
+    }
+    
+    .content-right {
+        padding-left: 20px;
+    }
+}
+
+@media all and (max-width: 630px) {
+    .sub2 .content-text {
+        flex-flow: column;
+    }
+    
+    .content-left,
+    .content-right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .con-text {
+        padding: 20px 0;
+    }
+}    
