@@ -265,7 +265,7 @@ header {
     column-gap: 20px;
 } */
 
-.newsroom-item {
+.newsroom-item a {
     display: flex;
     flex-flow: column;
     /* height: 100px; */

@@ -1,3 +1,4 @@
+/* sub5-2 공시정보 */
 .content-text {
     display: flex;
     flex-flow: column;
@@ -13,7 +14,7 @@
 
 
 .board-wrap {
-    border-top: 2px solid #071F75;
+    border-top: 2px solid #999;
 }
 
 .board-head {
@@ -21,7 +22,7 @@
     padding: 20px;
     font-weight: 600;
     border-bottom: 1px solid #bbb;
-    background-color: #f3f6ff;
+    background-color: #f3f3f3;
 }
 
 .board-head .board-tit {
@@ -66,7 +67,201 @@
     text-overflow: ellipsis;
 }
 
+.board-page {
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.board-page ul {
+    display: flex;
+}
+
+.board-page ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    border-radius: 100%;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.board-page ul li:hover {
+    background-color: #ebebeb;
+}
+
+.board-page ul li.active {
+    background-color: #071F75;
+    color: #fff;
+}
+
+/* sub5-3 재무정보 */
+.sub5-3 .content-top {
+    padding-bottom: 10px;
+}
+
+
+.fs-table tbody tr.sum {
+    background-color: #f7f7f7;
+    font-weight: 600;
+}
+
+.fs-table tbody tr.sum th {
+    font-weight: 600;
+}
+
+.fs-table thead th:first-child,
+.fs-table tbody th {
+    border-left: none;
+}
+
+.fs-table thead th:last-child,
+.fs-table tbody td:last-child {
+    border-right: none;
+}
+
+/* sub5-4 주가정보 */
+.sub5-3 .content-tit span {
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
+    padding: 20px 0;
+}
+.now-stock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.now-stock .left {
+    /* width: 30%; */
+    position: relative;
+    padding: 60px;
+    background-color: #071F75;
+    color: #fff;
+    text-align: center;
+}
+
+.now-stock .left p {
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.now-stock .left em {
+    font-size: 14px;
+}
+
+.now-stock .left span {
+    padding: 0 10px 0 30px;
+    background: url(../images/ico-stockUp.png) no-repeat center left 10px;
+}
+
+
+.now-stock .right {
+    padding-left: 40px;
+}
+
+.now-stock .right ul {
+    display: flex;
+}
+
+.now-stock .right ul li {
+    width: 150px;
+    border: 1px solid #ebebeb;
+    border-right: none;
+    text-align: center;
+}
+
+.now-stock .right ul li p {
+    padding: 20px;
+    border-bottom: 1px solid #ebebeb;
+    background-color: #f3f3f3;
+}
+
+.now-stock .right ul li span {
+    display: block;
+    padding: 20px;
+}
+
+.now-stock .right ul li:first-child {
+    border-left: none;
+}
+
+.sub5-3 .content-text h3 {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 24px;
+}
+
+.stock-table thead th:first-child,
+.stock-table tbody td:first-child {
+    border-left: none;
+}
+
+.stock-table thead th:last-child,
+.stock-table tbody td:last-child {
+    border-right: none;
+}
+
+.stock-table td.up {
+    background: url(../images/ico-stockUp.png) no-repeat center left 40px;
+}
+
+
+.stock-table td.down {
+    background: url(../images/ico-stockDown.png) no-repeat center left 40px;
+}
+
+.content-bottom {
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+@media all and (max-width: 1023px) {
+    /* sub5-4 주가정보 */
+    .now-stock {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .now-stock .left {
+        width: 100%;
+        padding: 60px 0;    
+    }
+
+    .now-stock .right {
+        width: 100%;
+        padding: 40px 0 0;
+    }
+
+    .now-stock .right ul li{
+        width: 25%;
+    }
+
+    .stock-table td.up {
+        background: url(../images/ico-stockUp.png) no-repeat center left 20px;
+    }
+    
+    
+    .stock-table td.down {
+        background: url(../images/ico-stockDown.png) no-repeat center left 20px;
+    }
+
+
+    .stock-table .year {
+        display: none;
+    }
+    
+
+}
+
 @media all and (max-width: 767px) {
+    /* sub5-2 공시정보 */
     .num {
         width: 10%;
         padding: 0;
@@ -79,11 +274,16 @@
     .board-tit {
         width: 65%;
     }
-    
+
+    /* sub5-4 주가정보 */
+    .stock-table .mobile-hide {
+        display: none;
+    }    
 }
 
 
 @media all and (max-width: 500px) {
+    /* sub5-2 공시정보 */
     .num {
         display: none;
     }
@@ -96,5 +296,36 @@
     .board-tit {
         width: 70%;
     }
+
+    /* sub5-4 주가정보 */
+    .now-stock .right {
+        padding: 40px 0 0;
+        font-size: 14px;
+    }
     
 }
+
+
+@media all and (max-width: 450px) {
+    /* sub5-4 주가정보 */
+    .stock-table {
+        font-size: 14px;
+    }
+
+    .stock-table td.up {
+        background: url(../images/ico-stockUp.png) no-repeat center left 10px;
+    }
+    
+    .stock-table td.down {
+        background: url(../images/ico-stockDown.png) no-repeat center left 10px;
+    } 
+
+    .stock-table thead th {
+        padding: 20px 10px;
+    }
+    
+    .stock-table tbody th,
+    .stock-table tbody td {
+        padding: 20px 10px;
+    }
+} 

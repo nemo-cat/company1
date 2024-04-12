@@ -225,3 +225,46 @@ button.search {
     background-color: #071F75;
     color: #fff;
 }
+
+.more-btn {
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #071F75;
+    color: #fff;
+}
+
+.more-btn:hover {
+    text-decoration: underline;
+}
+
+table {
+    border-top: 2px solid #999;
+}
+
+table th {
+    font-weight: 400;
+}
+
+table thead th {
+    padding: 20px;
+    border: 1px solid #ebebeb;
+    background-color: #f3f3f3;
+}
+
+table tbody th,
+table tbody td {
+    padding: 20px;
+    border: 1px solid #ebebeb;
+    text-align: center  ;
+}
+
+
+::-moz-selection {
+    background: #071F75;
+    color: #fff;
+ }
+ ::selection {
+    background: #071F75;
+    color: #fff;
+ }

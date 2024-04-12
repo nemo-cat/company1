@@ -1,0 +1,105 @@
+/* sub6-2 채용공고*/
+.content-text {
+    padding-top: 0;
+}
+
+.employment-list {
+    border-top: 2px solid #071F75;
+}
+
+.employment-list li {
+    padding: 30px 20px 50px;
+    border-bottom: 1px solid #ebebeb    ;
+}
+
+.employment-list li:hover {
+    background-color: #f8f8f8;
+}
+
+.employment-list li a {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.employment-list .top,
+.employment-list .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.employment-list .top {
+    padding-bottom: 30px;
+}
+
+.employment-list .top p {
+    font-weight: 600;
+    color: #071F75;
+}
+
+.employment-list .top p.invalid {
+    color: red;
+}
+
+.employment-list .top span {
+    color: #666;
+}
+
+.employment-list .bottom {
+    align-items: center;
+}
+
+.employment-list .bottom p {
+    width: calc(100% - 180px);
+    font-size: 24px;
+}
+
+.employment-list .bottom p span {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.employment-list .bottom button {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #c6c6c6;
+    background-color: initial;
+    transition: all 0.2s;
+}
+
+
+.employment-list .bottom button:hover {
+    background-color: #071F75;
+    color: #fff;
+}
+
+.employment-list .invalid + button:hover {
+    background-color: red;
+}
+
+@media all and (max-width: 500px) {
+    /* sub6-2 채용공고*/    
+    .employment-list li {
+        padding: 30px 20px;
+        border-bottom: 1px solid #ebebeb    ;
+    }
+    
+    .employment-list .bottom {
+        flex-flow: column;
+        align-items: flex-start;
+    }
+
+    .employment-list .bottom p {
+        width: 100%;
+    }
+
+    .employment-list .bottom button {
+        margin-top: 20px;
+        align-self: flex-end;
+    }
+
+    .employment-list .bottom button:hover {
+        background-color: #071F75;
+        color: #fff;
+    }
+}

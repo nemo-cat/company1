@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SR건설</title>
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style/defalut.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/sub.css">
@@ -14,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <header class="mobile-header">
+    <!-- <header class="mobile-header">
         <div class="mobile-bg"></div>
         <div class="wrap">
             <div class="header-top">
@@ -147,7 +145,7 @@
             <div class="gnb-bg"></div>
             <div class="nav-bg"></div>
         </div> 
-    </header>
+    </header> -->
     <main>
         <div class="subPage-tit">
             <p>투자정보</p>
@@ -158,119 +156,139 @@
             <div class="wrap">
                 <ul>
                     <li><a href="sub5-1.html">IR자료실</a></li>
-                    <li class="active"><a href="sub5-2.html">공시정보</a></li>
+                    <li><a href="sub5-2.html">공시정보</a></li>
                     <li><a href="sub5-3.html">재무정보</a></li>
-                    <li><a href="sub5-4.html">주가정보</a></li>
+                    <li class="active"><a href="sub5-4.html">주가정보</a></li>
                 </ul>
             </div>
         </nav>
-        <section class="sub5-2 sub5">
+        <section class="sub5-3 sub5">
             <div class="wrap">
                 <div class="content-tit">
-                    <h2>공시정보</h2>
+                    <h2>주가정보</h2>
+                    <span>SR건설의 실시간 주가 정보를 확인할 수 있습니다</span>
                 </div>
                 <div class="content-text">
-                    <div class="content-top">
-                        <span>총 55건</span>
-                        <div>
-                            <select name="" id="">
-                                <option value="">전체</option>
-                                <option value="">2024년</option>
-                                <option value="">2023년</option>
-                                <option value="">2022년</option>
-                                <option value="">2021년</option>
-                            </select>
-                            <button class="search">검색</button>
+                    <div class="now-stock">
+                        <div class="left">
+                            <div>
+                                <p>12,345</p>
+                                <em>전일대비<span>123</span>등락률<span>1.23</span></em>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <ul>
+                                <li>
+                                    <p>시가(원)</p>
+                                    <span>12,345</span>
+                                </li>
+                                <li>
+                                    <p>고가(원)</p>
+                                    <span>12,345</span>
+                                </li>
+                                <li>
+                                    <p>저가(원)</p>
+                                    <span>12,345</span>
+                                </li>
+                                <li>
+                                    <p>거래량</p>
+                                    <span>12,345</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="board-wrap">
-                        <div class="board-head">
-                            <p class="num">번호</p>
-                            <p class="board-tit">제목</p>
-                            <p class="date">공시일</p>
-                        </div>
-                        <ul class="board-list">
-                            <li>
-                                <a href="#none">
-                                    <p class="num">1</p>
-                                    <p class="board-tit">정기주주총회 결의사항 및 이사회 변경 사항 공시</p>
-                                    <p class="date">2024.04.04</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#none">
-                                    <p class="num">2</p>
-                                    <p class="board-tit">신규 사업 부문 진출 관련 기타경영사항 자율공시</p>
-                                    <p class="date">2024.04.04</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#none">
-                                    <p class="num">3</p>
-                                    <p class="board-tit">재무제표 및 영업실적 감사보고서 공개</p>
-                                    <p class="date">2024.04.04</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#none">
-                                    <p class="num">4</p>
-                                    <p class="board-tit">중대한 계약 체결에 따른 영향 공시</p>
-                                    <p class="date">2024.04.04</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#none">
-                                    <p class="num">5</p>
-                                    <p class="board-tit">기술 혁신 및 연구개발 투자 확대 계획 발표</p>
-                                    <p class="date">2024.04.04</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#none">
-                                    <p class="num">6</p>
-                                    <p class="board-tit">주식 배당 정책 변경 및 배당금 지급 결정 공시</p>
-                                    <p class="date">2024.04.04</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#none">
-                                    <p class="num">7</p>
-                                    <p class="board-tit">임원진 인사이동 및 경영진 재편 공시</p>
-                                    <p class="date">2024.04.04</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#none">
-                                    <p class="num">8</p>
-                                    <p class="board-tit">회사 합병 및 인수 관련 상세 정보 공유</p>
-                                    <p class="date">2024.04.04</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#none">
-                                    <p class="num">9</p>
-                                    <p class="board-tit">특허 취득 및 기술협력 파트너십 체결 공시</p>
-                                    <p class="date">2024.04.04</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#none">
-                                    <p class="num">10</p>
-                                    <p class="board-tit">환경, 사회, 지배구조(ESG) 관련 전략 및 활동 업데이트</p>
-                                    <p class="date">2024.04.04</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="board-page">
-                        <ul>
-                            <li class="active">1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                        </ul>
-                    </div>
+                    <h3>일자별 주가</h3>
+                    <table class="stock-table">
+                        <caption>일자별 주가 시세표</caption>
+                        <colgroup>
+                            <col style="width: 15%;">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>일자</th>
+                                <th>종가</th>
+                                <th>전일대비</th>
+                                <th class="mobile-hide">시가</th>
+                                <th class="mobile-hide">고가</th>
+                                <th class="mobile-hide">저가</th>
+                                <th>거래량</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="year">2024.</span>04.12</td>
+                                <td>12,345</td>
+                                <td class="down">123</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td>123,456</td>
+                            </tr>
+                            <tr>
+                                <td><span class="year">2024.</span>04.11</td>
+                                <td>12,345</td>
+                                <td class="up">123</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td>123,456</td>
+                            </tr>
+                            <tr>
+                                <td><span class="year">2024.</span>04.10</td>
+                                <td>12,345</td>
+                                <td class="down">123</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td>123,456</td>
+                            </tr>
+                            <tr>
+                                <td><span class="year">2024.</span>04.09</td>
+                                <td>12,345</td>
+                                <td class="down">123</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td>123,456</td>
+                            </tr>
+                            <tr>
+                                <td><span class="year">2024.</span>04.08</td>
+                                <td>12,345</td>
+                                <td class="up">123</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td>123,456</td>
+                            </tr>
+                            <tr>
+                                <td><span class="year">2024.</span>04.07</td>
+                                <td>12,345</td>
+                                <td class="up">123</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td>123,456</td>
+                            </tr>
+                            <tr>
+                                <td><span class="year">2024.</span>04.06</td>
+                                <td>12,345</td>
+                                <td class="up">123</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td class="mobile-hide">12,345</td>
+                                <td>123,456</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="content-bottom">
+                        <button class="more-btn">더보기</button>
+                    </div>    
                 </div>
             </div>
         </section>
@@ -296,8 +314,8 @@
             </div>
         </div>
     </footer>
-          <!-- Swiper JS -->
-          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
      <script src="script/script.js"></script>
      <script src="script/subScript.js"></script>
 </body>
