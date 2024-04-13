@@ -101,6 +101,7 @@ header {
 .pc-header nav {
     display: flex;
     justify-content: center;
+    min-width: calc(100% - 110px);
     width: calc(100% - 160px);
     color: #fff;
 }

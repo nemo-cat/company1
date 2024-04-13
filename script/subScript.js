@@ -37,4 +37,13 @@ $(document).ready(function()
     {
        $('#promotionList').append(promotionItem.clone());
     })
+
+    /* sub5 */
+    $('.board-page ul li').click(function()
+    {
+        $('.board-page ul li.active').removeClass('active');
+        $(this).addClass('active');
+    })
+
+
 });

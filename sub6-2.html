@@ -166,34 +166,36 @@
                     <h2>채용문의</h2>
                 </div>
                 <div class="content-text">
-                    <fieldset>
-                        <legend>채용문의를 위한 서식</legend>
-                        <ul class="inquiry-list">
-                            <li>
-                                <label for="formTit">제목</label>
-                                <input id="formTit" type="text" placeholder="제목을 입력해주세요">
-                            </li>
-                            <li>
-                                <div>
-                                    <label for="name">이름</label>
-                                    <input id="name" type="text" placeholder="이름을 입력해주세요">
-                                </div>
-                                <div>
-                                    <label for="phone">핸드폰</label>
-                                    <input id="phone" type="number" placeholder="핸드폰 번호를 입력해주세요">
-                                </div>
-                            </li>
-                            <li>
-                                <label for="email">이메일</label>
-                                <input id="email" type="email" placeholder="답변받을 이메일을 입력해주세요">
-                            </li>
-                            <li>
-                                <textarea cols="30" rows="10" placeholder="문의내용을 입력해주세요"></textarea>
-                            </li>
-                        </ul>
-                    </fieldset>
+                    <form>
+                        <fieldset>
+                            <legend>채용문의를 위한 서식</legend>
+                            <ul class="inquiry-list">
+                                <li>
+                                    <label for="formTit">제목</label>
+                                    <input id="formTit" type="text" placeholder="제목을 입력해주세요">
+                                </li>
+                                <li>
+                                    <div>
+                                        <label for="name">이름</label>
+                                        <input id="name" type="text" placeholder="이름을 입력해주세요">
+                                    </div>
+                                    <div>
+                                        <label for="phone">핸드폰</label>
+                                        <input id="phone" type="number" placeholder="핸드폰 번호를 입력해주세요">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="email">이메일</label>
+                                    <input id="email" type="email" placeholder="답변받을 이메일을 입력해주세요">
+                                </li>
+                                <li>
+                                    <textarea cols="30" rows="10" placeholder="문의내용을 입력해주세요"></textarea>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
                     <div class="content-bottom">
-                        <button class="more-btn">보내기</button>
+                        <button class="more-btn" onclick="alert('접수되었습니다.')">보내기</button>
                     </div>
                 </div>
             </div>

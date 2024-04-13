@@ -62,6 +62,8 @@ button,
 img,
 fieldset {
     border: none;
+    /* ios border-radius 초기화 */
+    -webkit-border-radius: 0;
 }
 ul,
 ol,
@@ -265,7 +267,8 @@ select {
     background: url(../images/ico-selectDown.png) no-repeat center right 15px;
 }
 
-button {
+button,
+select {
     color: #666;
 }
 
@@ -289,7 +292,7 @@ button.search {
 }
 
 table {
-    border-top: 2px solid #999;
+    border-top: 2px solid #999; 
 }
 
 table th {
@@ -299,6 +302,7 @@ table th {
 table thead th {
     padding: 20px;
     border: 1px solid #ebebeb;
+    border-bottom: none;
     background-color: #f3f3f3;
 }
 
