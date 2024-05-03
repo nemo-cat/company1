@@ -125,7 +125,6 @@
 }
 
 /* sub1-1 인사말 */
-
 .content-img {
     position: relative;
     height: 300px;
@@ -318,11 +317,6 @@
     text-align: center;
 }
 
-/* .public-transport {
-    display: flex;
-    align-items: center;
-}
- */
 .public-transport ul {
     width: 100%;
 }
@@ -361,6 +355,18 @@
     background-color: #67823a;
 }
 
+/* 다음지도 버튼 조정 */
+.root_daum_roughmap .wrap_btn_zoom .btn_zoom_in,
+.root_daum_roughmap .wrap_btn_zoom .btn_zoom_out  {
+    width: 30px;
+    height: 30px;
+}
+
+.root_daum_roughmap .wrap_btn_zoom .btn_zoom_reset .img_zoom {
+    background-position: -80px -72px!important;
+}
+
+
 /* sub2-1 인사말 */
 .sub2-1 h3 {
     /* text-align: center; */
@@ -387,7 +393,6 @@
 .sub2 .content-item {
     display: flex;
     flex-flow: row nowrap;
-  /*   margin-bottom: 50px; */
 }
 
 .sub2 .content-item:nth-child(odd) .content-item-inner {

@@ -87,7 +87,6 @@
     padding-left: 80px;
 }
 
-
 .news-tit {
     height: 50px;
     font-size: 24px;
@@ -110,7 +109,6 @@
     overflow: hidden;
 }
 
-
 .news-date {
     display: flex;
     justify-content: flex-end;
@@ -125,8 +123,6 @@
     padding: 50px 0 0;
     text-align: center;
 }
-
-
 
 /* 홍보자료 */
 .promotion-video {
@@ -188,8 +184,6 @@
     -webkit-line-clamp: 3;
 }
 
-
-
 @media all and (max-width: 1023px) {
     .news-left {
         width: 315px;
@@ -211,8 +205,6 @@
         grid-template-columns: 1fr 1fr;
         padding: 20px 10px;
     }
-
-    
 }
 
 @media all and (max-width: 767px) {
@@ -297,9 +289,7 @@
         padding: 20px 0;
     }
 
-    
-.promotion-text {
-    -webkit-line-clamp: 2;
-}
-
+    .promotion-text {
+        -webkit-line-clamp: 2;
+    }
 }

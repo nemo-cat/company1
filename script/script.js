@@ -41,7 +41,6 @@ $(document).ready(function()
     /* =========================================================== */
 
 
-
     /* Swiper 모음 */
     //메인슬라이드 스와이퍼
     let slideSwiper = new Swiper('.slide-swiper',
@@ -70,7 +69,7 @@ $(document).ready(function()
     {
         direction : 'horizontal',
         loop: true,
-        autoplay : { delay: 3000 },
+        autoplay : { delay: 4000 },
         speed: 300,
         breakpoints:
         {
@@ -101,6 +100,7 @@ $(document).ready(function()
         direction : 'horizontal',
         loop: true,
         autoplay : { delay: 3000 },
+        speed: 300,
         breakpoints :
         {
             320:
@@ -157,36 +157,6 @@ $(document).ready(function()
         }
     });
 
-   /*  let recruitmentSwiper = new Swiper('.recruitment-swiper',
-        {
-            direction : 'horizontal',
-            loop: true,
-            autoplay : { delay: 3000 },
-            speed: 300,
-            loopFillGroupWithBlank : true,
-            breakpoints:
-            {
-                320:
-                {
-                    spaceBetween: 10,
-                    slidesPerView: 1,  
-                    slidesPerGroup : 1,
-                },
-                600:
-                {
-                    spaceBetween: 20,
-                    slidesPerView: 2,  
-                    slidesPerGroup : 2
-                },
-                1024:
-                {
-                    spaceBetween : 20, 
-                    slidesPerView : 3, 
-                    slidesPerGroup : 3,
-                }
-            }
-        });
- */
     /* ================================= */
 
     $(window).resize(function() {
@@ -200,12 +170,11 @@ $(document).ready(function()
         }
     });
 
-
     //이미지 경로 저장
     let whiteSrc ='images/logo-white.png';
     let colorSrc = 'images/logo-color.png';
-    let whiteMenuSrc = 'url("../images/ico-menu.png")'
-    let colorMenuSrc = 'url("../images/ico-menu-color.png")'
+    let whiteMenuSrc = 'url("images/ico-menu.png")'
+    let colorMenuSrc = 'url("images/ico-menu-color.png")'
 
     // nav 기본값, bg, sub-menu등 숨김
     resetNav()
@@ -261,20 +230,6 @@ $(document).ready(function()
         $('.pc-header .pc-bg').stop().slideUp(100); 
         $('.logo-img').attr('src', whiteSrc); // 흰색 로고로 바꿔줌
     });
-  /*   $('.pc-header').mouseenter(function()
-    {
-        $('.pc-header .pc-bg').stop().slideDown(200);
-        $('.pc-header .sub-menu').stop().slideDown(200);
-        $('.logo-img').attr('src', colorSrc); //컬러 로고로 바꿔줌
-    })
-
-    $('.pc-header').mouseleave(function()
-    {
-        $('.pc-header .sub-menu').stop().slideUp(100);
-        $('.pc-header .pc-bg').stop().slideUp(100);
-        $('.logo-img').attr('src', whiteSrc); //흰색 로고로 바꿔줌
-    })
- */
 
     // 모바일,태블릿 nav
     let checkClick = true; //toggle상태를 확인하기 위해서 사용
